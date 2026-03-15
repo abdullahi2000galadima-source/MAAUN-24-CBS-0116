@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from models import Question, Result
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="Assignment4.py/templates")
 
 # Stack (LIFO) to store results
 result_stack = []
