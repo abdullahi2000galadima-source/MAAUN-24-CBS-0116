@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+>
+
+<h2>Answer the Questions</h2>
+
+<form action="/submit" method="post">
+
+{% for q in questions %}
+
+<p>{{ q.question }}</p>
+
+{% for option in q.options %}
+<input type="radio" name="q{{ loop.parent.index0 }}" value="{{ option }}"> {{ option }} <br>
+{% endfor %}
+
+{% endfor %}
+
+<br>
+<button type="submit">Submit Test</button>
+
+</form>
+
+</body>
+</html>
